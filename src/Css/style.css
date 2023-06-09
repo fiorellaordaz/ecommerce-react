@@ -1,5 +1,7 @@
 
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;500&display=swap');
+   /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@300;500&display=swap'); */
+
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@0;1&display=swap');
 
 
 :root{
@@ -14,8 +16,7 @@
 
 body{
     margin: 0px;
-    color: var(--negro);
-    font-family: 'Inter', sans-serif;
+    color: hsl(var(--hue) 31.71% 75.88%);
     font-size: 16px;
     text-decoration: none;
 }
@@ -25,12 +26,25 @@ img{
     max-width: 100%;
 }
 
-.container{
+.containeer{
     max-width: 1120px;
     margin: 0 auto;
 }
 
+.detalles-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.detalles-nav a{
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+    color:hsl(var(--hue) 31.71% 26%);
+}
+
 /*tipografias*/
+
 h1, .h1 {
     margin-top: 0;
     font-size: 3.052rem;}
@@ -42,17 +56,16 @@ h1, .h1 {
 }
 
 .link{
+    color: hsl(var(--hue) 31.71% 26%);
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: var(--negro);
+    font-family: 'PT Serif', serif;
+    font-weight:600;
 }
 
 a{
-    color: var(--negro);
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'PT Serif', serif;
 
 }
 
@@ -61,24 +74,26 @@ a{
 .cabeza{
     padding: 16px;
     display: flex;
-    align-content: space-between;
-    justify-content:space-between;
+    justify-content:space-around;
+    align-items:center;
 }
 
 .cabeza input{
-    width: 50%;
-    padding: 16px;
-    border-radius: 16px;
-    font-family:'Inter', sans-serif;
-}
-
-.cabeza #comprar{
-    width: 10%;
-    align-content: center;
-    justify-items: center;
+    background-image: url("../../src/assets/Images/Icono/lupa.svg");
+    background-repeat:no-repeat;
+    background-size: 4%;
+    background-position: 98%;
+    width: 45em;
+    padding: 8px;
+    border: 1px solid #cacaca;
+    box-shadow: 1px 1px 1px #cacaca;
+    border-radius: 21px;
+    outline: none;
+    font-family: 'PT Serif', serif;
 }
 
 #comprar{
+    width:8em;
     padding: 8px;
     position: relative;
     display: inline-block;
@@ -86,7 +101,7 @@ a{
 }
 
 .cabeza img{
-    width: 150px;
+    width: 180px;
 }
 
 /*login y registro*/
@@ -104,49 +119,72 @@ main .login{
 }
 
 .login #form1{
-    padding: 32px;
+    padding: 21px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
-.login #form1 p{
-    margin: 0;
+.login #form1{
+    color: hsl(var(--hue) 31.71% 26%);
+    font-family: 'PT Serif', serif;
 }
-
 .login input{
-    padding: 16px;
-    border-radius: 8px;
+    outline: none;
+    padding: 8px;
+    border: 1px solid #cacaca;
+    box-shadow: 1px 1px 1px #cacaca;
+    border-radius: 21px;
 }
 
 .registra #form{
-    padding: 32px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.registra #form p{
+.registra #form p, 
+.registra #form h3,
+.registra #form{
     margin:0;
+    color: hsl(var(--hue) 31.71% 26%);
+    font-family: 'PT Serif', serif;
 }
 
 .registra #form input{
-padding: 16px;
-border-radius: 8px;
+    outline: none;
+padding: 8px;
+border: 1px solid #cacaca;
+box-shadow: 1px 1px 1px #cacaca;
+border-radius: 21px;
+}
+
+.entrada{
+    display: flex;
+    flex-direction: row;
 }
 
 /*botones*/
-.btn{
-    padding: 16px 24px;
+.btnn{
+    color:hsl(var(--hue) 31.71% 26%);
+    padding: 8px;
     display: inline-block;
     text-decoration: none;
     background-color: var(--principal);
     border-radius: 16px;
     border: none;
-    font-family:'Inter', sans-serif;
-    font-weight:bold;
-    font-size: larger;
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
     text-align: center;
+}
+
+.btnn:hover{
+    color:#c78283;
+    background-color: white;
+    border:2px solid var(--principal);
+    box-shadow: 2px 2px 2px 2px hsl(var(--hue) 31.71% 75.88%);
+    transition: 5ms;
 }
 
 .btn-secundario{
@@ -173,11 +211,11 @@ main h3{
 /*cards*/
 
 .card{
-    border: 4px solid var(--principal);
+    border: 8px solid #75704e;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     gap: 8px;
 }
 
@@ -186,6 +224,12 @@ main h3{
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.info-card h5,
+.info-card p{
+    font-family: 'PT Serif', serif;
+    color:hsl(var(--hue) 31.71% 26%)
 }
 
 .producto-titulo{
@@ -198,31 +242,56 @@ main h3{
     display:flex;
     gap:16px;
 }
-.card-actions .anadir{
-    width: 85%;
+.anadir{
+    border-radius: 16px;
+    outline: none;
+    background-color: #c78283;
+    color:white;
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+    width: 8rem;
 }
 
-.card-actions .btn-secundario{
-    width: 25%;
+.btn-secundario{
+    display: flex;
+    justify-content: center;
+    padding: 6px;
+    width: 8rem;
+    border-radius: 16px;
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: white;
 }
+
+
+
 
 .rating{
     color: #cacaca;
 }
 
 .Franja-card{
+    padding: 16px;
     display: flex;
     justify-content: baseline;
     gap: 8px;
 }
-.caard{
+.card{
     display: flex;
+    justify-content: space-around;
+    outline: 1px solid hsl(var(--hue) 31.71% 75.88%);
+    box-shadow: 1px 1px 8px hsl(var(--hue) 31.71% 26%);
     gap: 8px;
 }
 
-.producto-titulo h3{
-    margin: 0;
+.item{
+    display: flex;
+    justify-content:space-between;
+    justify-items: baseline;
 }
+
+
 
 .producto-titulo p{
     font-size: large;
@@ -258,8 +327,9 @@ span{
 
 /*box*/
 .box{
-    border:4px solid var(--principal);
+    border:1px solid var(--principal);
     border-radius: 16px;
+    box-shadow: 1px 1px 4px 2px hsl(var(--hue) 31.71% 75.88%);
 }
 
 /* Alinear tipo wrap*/
@@ -280,10 +350,21 @@ ul{
 #navegador ul,
 #navegador li{
     display: flex;
-    gap: 16px;
+    gap: 32px;
 }
 
 /* section de baneficios*/
+.selection{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+    padding: 32px;
+}
+
+.selection h4,
+.selection h5{
+    color:hsl(var(--hue) 31.71% 26%);
+}
 .beneficios{
     display: flex;
     flex-direction: row;
@@ -293,13 +374,9 @@ ul{
     gap: 8px;
 }
 
-section .container,
-section .beneficios{
-    width: 100%;
-}
-
 .beneficios1, .beneficios2, .beneficios3, .beneficios4{
     display: flex;
+    justify-content: space-around;
 }
 
 .beneficios h4,
@@ -327,59 +404,69 @@ section .beneficios{
 }
 
 /*footer*/
-footer{
-    margin: none;
-    padding: 16px;
+
+.pistacho{
     display: flex;
-    justify-content: space-between;
-    background-color: var(--principal);
+    justify-content: space-around;
+    padding: 32px;
+    background-color: hsl(var(--hue) 31.71% 75.88%);
+    align-items: center;
 }
 
-footer img{
-    width: 20%;
-    margin-left: 24px;
-}
-
-footer .pie,
-footer .columna2fot{
-    width: 50%;
-
-}
-
-.logofoot{
+.politicas{
     display: flex;
-    flex-direction: column;
-    gap:56px
 }
 
-.columna1fot{
+.pistacho a{
+    text-decoration: none;
+    color: hsl(var(--hue) 31.71% 26%);
+    font-family: 'PT Serif', serif;
+    font-size:medium;
+    font-weight: 700;
+}
+
+.pistacho li{
+    color: hsl(var(--hue) 31.71% 26%);
+    font-family: 'PT Serif', serif;
+    font-size:medium;
+    font-weight: 700;
+}
+
+.logotipo{
+    display:flex;
+    padding-bottom: 36px;
+    margin-left: 21px;
+}
+
+.comunidad{
+    display: flex;
+    justify-items: right;
+}
+.comunidad h3{
+    color:hsl(var(--hue) 31.71% 26%);
+    font-family: 'PT Serif', serif;
+}
+
+.columna1foot{
     display: flex;
     padding: 16px;
     gap: 16px;
     align-items: center;
 }
 
-.columna2fot{
+.columna2foot{
     display: flex;
     flex-direction: column;
-}
-
-.columna2fot h3{
-    margin: 0;
 }
 
 .comunidad{
     display: flex;
     flex-direction: column;
-    gap: 32px;
-}
-.suscribe{
-    padding: 0;
-    margin: 0;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .suscribe .news{
+    font-family: 'PT Serif', serif;
     padding: 8px;
     border: none;
     border-top-left-radius: 8px;
@@ -387,33 +474,25 @@ footer .columna2fot{
     width: 50%;
 }
 
+span{
+    font-family: 'PT Serif', serif;
+}
+
 .suscribe button{
+    color: white;
     padding: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     width: 25%;
     background-color: #c78283;
-    color: var(--negro);
-    font-family:'Inter', sans-serif;
+    font-family: 'PT Serif', serif;
     border:none;
 }
 
 .redes{
-    padding: 32px;
+    padding-top: 32px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    flex-direction:row;
+    justify-content:flex-start;
     gap: 8px;
 }
-
-.iconos{
-    margin: 0;
-    display:flex;
-    
-}
-
-.iconos img{
-    margin:0
-}
-
