@@ -78,11 +78,17 @@ a{
     align-items:center;
 }
 
+.buscador{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .cabeza input{
     background-image: url("../../src/assets/Images/Icono/lupa.svg");
     background-repeat:no-repeat;
     background-size: 4%;
-    background-position: 98%;
+    background-position: 95%;
     width: 45em;
     padding: 8px;
     border: 1px solid #cacaca;
@@ -90,6 +96,7 @@ a{
     border-radius: 21px;
     outline: none;
     font-family: 'PT Serif', serif;
+    color: hsl(var(--hue) 31.71% 26%);
 }
 
 #comprar{
@@ -242,15 +249,6 @@ main h3{
     display:flex;
     gap:16px;
 }
-.anadir{
-    border-radius: 16px;
-    outline: none;
-    background-color: #c78283;
-    color:white;
-    font-family: 'PT Serif', serif;
-    font-weight: 500;
-    width: 8rem;
-}
 
 .btn-secundario{
     display: flex;
@@ -264,8 +262,12 @@ main h3{
     color: white;
 }
 
-
-
+.btn-secundario:hover{
+    color:#c78283;
+    background-color: white;
+    outline: 2px solid #c78283;
+    box-shadow: 2px 2px 2px 2px #c78283;
+}
 
 .rating{
     color: #cacaca;
@@ -496,3 +498,82 @@ span{
     justify-content:flex-start;
     gap: 8px;
 }
+
+/*Carrito*/
+
+
+
+.pedido{
+    
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.botones a{
+display:inline-block;
+justify-content: space-between;
+color: white;
+font-family: 'PT Serif', serif;
+text-decoration: none;
+}
+
+.botones button{
+    padding: 8px;
+    display:inline-block;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: #c78283;
+}
+
+/* Carrito */
+
+.boxing{
+    padding: 0;
+    margin-left: 170px;
+    margin-right: 35px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxing h1{
+    font-family: 'PT Serif', serif;
+    color: hsl(var(--hue) 31.71% 26%);
+}
+
+.box1 a{
+    padding: 16px;
+    background-color: #c78283;
+    border-radius: 16px;
+    outline: none;
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+    font-size: large;
+    color: white;
+}
+
+.padreProducto{
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listaProduct{
+    display: flex;
+    justify-content: space-between;
+}
+
+.element{
+    display:flex;
+    flex-direction: column;
+}
+

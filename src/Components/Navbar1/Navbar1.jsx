@@ -1,4 +1,5 @@
 import "../../Css/style.css";
+import {Link} from "react-router-dom";
 
 export default function Navbar1() {
   return (
@@ -8,28 +9,23 @@ export default function Navbar1() {
           <div className="col-izq">
             <ul>
               <li>
-                <a href="../html/index.html">Inicio</a>
+                <a> <Link to="/">Inicio</Link></a>
               </li>
               <li>
-                <a href="../html/productos.html">Productos</a>
+                <a> <Link to="Products">Productos</Link> </a>
               </li>
               <li>
-                <a href="../html/carrito.html">Carrito</a>
+                <a> <Link to="Carrito">Carrito</Link> </a>
               </li>
               <li>
-                <a href="../html/detallesproductos.html">
-                  Detalles de Productos
-                </a>
+                <a> <Link to="DetalleProducto">Detalles de Productos</Link> </a>
               </li>
             </ul>
           </div>
           <div className="col-der">
             <ul>
               <li>
-                <a href="carrito.html">Mis Pedidos</a>
-              </li>
-              <li>
-                <a href="index.html">logout</a>
+                <Link to="/">logout</Link>
               </li>
             </ul>
           </div>

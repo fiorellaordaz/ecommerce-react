@@ -1,4 +1,5 @@
 import "../../Css/style.css";
+import {Link} from "react-router-dom";
 
 export default function Cards({ element }) {
   return (
@@ -27,12 +28,8 @@ export default function Cards({ element }) {
               </div>
               <p>{item.subtitleCard}</p>
               <div className="card-actions">
-                <button className="anadir" type="submit" name="boton">
-                  {item.buttonCard}
-                </button>
-                <a className="btn-secundario" href="carrito.html">
-                  {item.linkTo}
-                </a>
+                <Link className="btn-secundario" to= "/DetalleProducto">{item.buttonCard}</Link>
+              <Link className="btn-secundario" to="/Carrito"> {item.linkTo}</Link>
               </div>
             </div>
           </div>

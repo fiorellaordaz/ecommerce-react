@@ -1,15 +1,9 @@
-import Header1 from "../../src/Components/Header1";
-import Navbar from "../../src/Components/Navbar";
-import Selection from "../../src/Components/Selection";
-import { selec } from "../../src/Components/Selection/selec";
-import Footer from "../../src/Components/Footer";
+
 import "../../src/Css/estilos.css";
 
 export default function Home() {
   return (
     <>
-      <Header1 />
-      <Navbar />
       <>
         <div className="entrada">
           <div className="container">
@@ -89,8 +83,7 @@ export default function Home() {
           </div>
         </div>
       </>
-      <Selection selection={selec} />
-      <Footer />
+
     </>
   );
 }
