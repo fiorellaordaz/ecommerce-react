@@ -1,5 +1,5 @@
 import "../../Css/style.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Cards({ element }) {
   return (
@@ -28,8 +28,13 @@ export default function Cards({ element }) {
               </div>
               <p>{item.subtitleCard}</p>
               <div className="card-actions">
-                <Link className="btn-secundario" to= "/DetalleProducto">{item.buttonCard}</Link>
-              <Link className="btn-secundario" to="/Carrito"> {item.linkTo}</Link>
+                <Link className="btn-secundario" to="22">
+                  {item.buttonCard}
+                </Link>
+                <Link className="btn-secundario" to="carrito">
+                  {" "}
+                  {item.linkTo}
+                </Link>
               </div>
             </div>
           </div>

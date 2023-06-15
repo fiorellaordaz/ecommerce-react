@@ -1,7 +1,7 @@
 import "../../Css/style.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Navbar1() {
+export default function Navbar1({ existUser }) {
   return (
     <>
       <nav id="navegador">
@@ -9,26 +9,28 @@ export default function Navbar1() {
           <div className="col-izq">
             <ul>
               <li>
-                <a> <Link to="/">Inicio</Link></a>
+                <Link to="/">Inicio</Link>
               </li>
               <li>
-                <a> <Link to="Products">Productos</Link> </a>
+                <Link to="/products">Productos</Link>
               </li>
               <li>
-                <a> <Link to="Carrito">Carrito</Link> </a>
+                <Link to="/carrito">Carrito</Link>
               </li>
               <li>
-                <a> <Link to="DetalleProducto">Detalles de Productos</Link> </a>
+                <Link to="/detalleProducto">Detalles de Productos</Link>
               </li>
             </ul>
           </div>
-          <div className="col-der">
-            <ul>
-              <li>
-                <Link to="/">logout</Link>
-              </li>
-            </ul>
-          </div>
+          {existUser ? (
+            <div className="col-der">
+              <ul>
+                <li>
+                  <Link to="/">logout</Link>
+                </li>
+              </ul>
+            </div>
+          ) : null}
         </div>
       </nav>
     </>
