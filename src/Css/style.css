@@ -11,7 +11,7 @@
 }
 
 * {
-    box-sizing:border-box
+    box-sizing:border-box;
 }
 
 body{
@@ -28,7 +28,6 @@ img{
 
 .containeer{
     max-width: 1120px;
-    margin: 0 auto;
 }
 
 .detalles-nav{
@@ -530,18 +529,47 @@ text-decoration: none;
 
 /* Carrito */
 
+.carro{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+}
+
+.carro h3,
+.carro p{
+    font-family: 'PT Serif', serif;
+    color:hsl(var(--hue) 31.71% 26%);
+}
+
+.card button{
+    color:hsl(var(--hue) 31.71% 26%);
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--principal);
+    border-radius: 16px;
+    border:2px solid transparent; 
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card a{
+    color: hsl(var(--hue) 31.71% 26%);
+    text-decoration: none;
+}
+
 .boxing{
     padding: 0;
-    margin-left: 170px;
-    margin-right: 35px;
-    margin-bottom: 40px;
+    color: hsl(var(--hue) 31.71% 26%);
     display: flex;
     justify-content: space-between;
 }
 
 .boxing h1{
     font-family: 'PT Serif', serif;
-    color: hsl(var(--hue) 31.71% 26%);
+    
 }
 
 .box1 a{
@@ -555,9 +583,8 @@ text-decoration: none;
     color: white;
 }
 
-.padreProducto{
+.padreproducto{
     display: flex;
-    width: 100%;
     justify-content:space-around;
 }
 

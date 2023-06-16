@@ -13,9 +13,9 @@ export default function Carrito() {
         </div>
       </div>
 
-      <div className="padreProducto">
+      <div className="padreproducto">
         <div>
-          <div className="listaProduct">
+          <div className="boxing">
             <img src="." alt="producto1" width="100px" height="auto" />
 
             <div className="element">
@@ -36,8 +36,8 @@ export default function Carrito() {
             </button>
           </div>
         </div>
-
-        <div className="box">
+        <div className="card">
+        <div className="carro" >
           <h3>Resumen de Pedido</h3>
           <p>parrafo sobre la compra</p>
           <p>$345</p>
@@ -47,7 +47,9 @@ export default function Carrito() {
             </Link>
           </button>
         </div>
-      </div>
+        </div>
+        </div>
+      
     </>
   );
 }
