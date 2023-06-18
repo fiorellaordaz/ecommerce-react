@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../../Css/style.css";
+import foto from "../../assets/Images/foto2.jpg";
 
 export default function Carrito() {
   return (
@@ -14,9 +15,9 @@ export default function Carrito() {
       </div>
 
       <div className="padreproducto">
-        <div>
+        <div className="elementos">
           <div className="boxing">
-            <img src="." alt="producto1" width="100px" height="auto" />
+            <img src={foto} alt="producto1" width="100px" height="auto" />
 
             <div className="element">
               <h4>Nombre del Producto</h4>
@@ -37,19 +38,26 @@ export default function Carrito() {
           </div>
         </div>
         <div className="card">
-        <div className="carro" >
-          <h3>Resumen de Pedido</h3>
-          <p>parrafo sobre la compra</p>
-          <p>$345</p>
-          <button type="submit" name="pago">
-            <Link to="/Finalizar" name="proceder">
-              Proceder al Pago
-            </Link>
-          </button>
+          <div className="carro">
+            <div className="resumen">
+              <h3>Resumen de Pedido</h3>
+            </div>
+            <p>
+              GENIAL! Gracias por tu compra. <br />
+              Esperamos que todo sea de tu agrado y lo disfrutes mucho!
+            </p>
+            <p>
+              {" "}
+              <span>TOTAL</span> $345
+            </p>
+            <button type="submit" name="pago">
+              <Link to="/Finalizar" name="proceder">
+                Proceder al Pago
+              </Link>
+            </button>
+          </div>
         </div>
-        </div>
-        </div>
-      
+      </div>
     </>
   );
 }
